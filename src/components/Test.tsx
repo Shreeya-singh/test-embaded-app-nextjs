@@ -25,11 +25,13 @@ const Test = () => {
 
   return (
     <div className="relative w-[300px] h-[300px] flex justify-center items-center">
-      {isActive && (
+      <button
+        className='bg-transparent'
+        onClick={() => setIsActive(!isActive)}>
         <p className="text-5xl text-black">
           {formatTime(timeLeft)}
         </p>
-      )}
+      </button>
     </div>
   )
 }
